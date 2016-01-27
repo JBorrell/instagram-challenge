@@ -1,2 +1,10 @@
-No Posts Yet
+<% if @posts.any? %>
+  <% @posts.each do |post| %>
+    <p> <%= post.caption %> </p>
+    <br><br>
+  <% end %>
+<% else %>
+  No Posts Yet
+<% end %>
+<br><br>
 <a href='#'>Post!</a>
